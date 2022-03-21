@@ -1,0 +1,29 @@
+:root {
+	--primary: #ff79c6;
+	--secondary: #bd93f9;
+	--accent: #ffb86c;
+	--neutral: #414558;
+	--base-100: #282a36;
+	--base-content: #f8f8f2;
+	--info: #8be9fd;
+	--success: #50fa7b;
+	--warning: #f1fa8c;
+	--error: #ff5555;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "DM Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+		sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}

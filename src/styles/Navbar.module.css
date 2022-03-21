@@ -1,0 +1,23 @@
+.btn {
+	text-transform: uppercase;
+	border: none;
+	border-color: hsl(265, 89%, 78%);
+	border-radius: 0.5rem;
+	height: 3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	line-height: 1rem;
+	min-height: 3rem;
+	font-weight: 600;
+	border-width: 1px;
+	font-size: 0.8em;
+	font-weight: bold;
+	flex-shrink: 0;
+	user-select: none;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.btn-primary {
+	background-color: hsl(265, 89%, 78%);
+}
