@@ -1,16 +1,3 @@
-:root {
-	--primary: #ff79c6;
-	--secondary: #bd93f9;
-	--accent: #ffb86c;
-	--neutral: #414558;
-	--base-100: #282a36;
-	--base-content: #f8f8f2;
-	--info: #8be9fd;
-	--success: #50fa7b;
-	--warning: #f1fa8c;
-	--error: #ff5555;
-}
-
 html,
 body {
 	background-color: #1c1a1a;
@@ -32,7 +19,7 @@ a {
 .NavIcon {
 	width: 4em;
 	height: 2em;
-	color: rgba(255, 255, 255, 0.5);;
+	color: rgba(255, 255, 255, 0.5);
 	cursor: pointer;
 	user-select: none;
 }
@@ -139,7 +126,7 @@ a {
 	}
 
 	.nav-menu.active {
-		background-color: #21517D;
+		background-color: #21517d;
 		left: 0;
 		opacity: 1;
 		transition: all 0.5s ease;
@@ -189,7 +176,7 @@ a {
 		margin: 2rem auto;
 		border-radius: 4px;
 		width: 80%;
-		background: #007CC7;
+		background: #007cc7;
 		text-decoration: none;
 		color: #fff;
 		font-size: 1.5rem;
@@ -212,7 +199,7 @@ a {
 }
 
 .form {
-	background-color: #485D74;
+	background-color: #485d74;
 	border-radius: 20px;
 	box-sizing: border-box;
 	height: 580px;
@@ -264,7 +251,7 @@ a {
 }
 
 .cut {
-	background-color: #485D74;
+	background-color: #485d74;
 	border-radius: 10px;
 	height: 20px;
 	left: 20px;
@@ -302,7 +289,7 @@ a {
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
-	color: #485D74;
+	color: #485d74;
 }
 
 .input:focus ~ .placeholder {

@@ -6,13 +6,10 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"format": "prettier --write '**/*.{js,jsx}'"
 	},
 	"dependencies": {
-		"@mantine/core": "^4.0.7",
-		"@mantine/hooks": "^4.0.7",
-		"@mantine/next": "^4.0.7",
-		"@mantine/notifications": "^4.0.7",
 		"axis": "^1.0.0",
 		"next": "12.1.0",
 		"react": "17.0.2",
