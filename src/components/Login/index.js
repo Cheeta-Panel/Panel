@@ -5,12 +5,6 @@ const LoginForm = () => {
 	const [loading, setLoading] = useState(false);
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		alert(
-			JSON.stringify({
-				email: e.target.email.value,
-				password: e.target.password.value
-			})
-		);
 		setLoading(true);
 		setTimeout(() => {
 			setLoading(false);
