@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Container = styled.div`
 	width: 100vw;
@@ -83,10 +83,32 @@ const Link = styled.a`
 	}
 `;
 
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
 const Center = styled.div`
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 `;
 
-export { Container, Label, Button, Input, Form, Link, Center };
+const Spinner = styled.div`
+	animation: ${rotate360} 1s linear infinite;
+	transform: translateZ(0);
+	background-color: white;
+	border-top: 2px solid grey;
+	border-right: 2px solid grey;
+	border-bottom: 2px solid grey;
+	border-left: 4px solid black;
+	background: transparent;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+`;
+
+export { Container, Label, Button, Input, Form, Link, Spinner, Center };
