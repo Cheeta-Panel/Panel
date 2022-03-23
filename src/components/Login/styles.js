@@ -17,7 +17,7 @@ const Form = styled.form`
 	flex-direction: column;
 	box-shadow: inset 0 0 0 1px #2b2b2b;
 	@media screen and (max-width: 768px) {
-		width: 50%;
+		width: 90%;
 	}
 `;
 
