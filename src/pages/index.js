@@ -1,8 +1,9 @@
 import Head from "next/head";
 import React from "react";
-import Content from "../components/Home/Content.js";
-import Wave from "../components/Home/Wave.js";
-import Navbar from "../components/Navbar/index.js";
+import Navbar from "../components/layouts/Navbar";
+import Waves from "../components/layouts/Waves";
+import Header from "../components/pages/Login/Header";
+import ScreenContainer from "../components/layouts/ScreenContainer";
 
 export default function Home() {
 	return (
@@ -12,9 +13,11 @@ export default function Home() {
 				<meta name="description" content="Cheetapanel" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Navbar />
-			<Content />
-			<Wave />
+			<ScreenContainer>
+				<Navbar />
+				<Header />
+				<Waves />
+			</ScreenContainer>
 		</>
 	);
 }
