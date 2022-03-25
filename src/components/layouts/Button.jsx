@@ -9,6 +9,8 @@ const Button = ({ width = "6rem", height = "3rem", children, ...props }) => {
 			display="flex"
 			justifyContent="center"
 			alignItems="center"
+			textTransform="uppercase"
+			fontSize=".875rem"
 			_active={{ transform: "scale(1.03)", transition: "all", transitionDuration: "50ms", transitionTimingFunction: "linear" }}
 			_focus={{ border: "none" }}
 			{...props}

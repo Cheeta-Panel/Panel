@@ -1,14 +1,14 @@
-import styles from "../../styles/Wave.module.css";
 import Wavify from "react-wavify";
-import { Box } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 const Waves = () => {
 	return (
-		<Box transform="scaleX(-1)" bottom="0" width="full" display="flex" justifyContent="end" left="0" position="absolute">
+		<Flex transform="scaleX(-1)" bottom="0" width="full" justifyContent="end" left="0" position="absolute">
 			<Wavify
 				className={styles.wave}
 				fill="#2b2b2b"
 				paused={false}
+				style={{ position: "relative" }}
 				options={{
 					height: 50,
 					amplitude: 45,
@@ -16,7 +16,7 @@ const Waves = () => {
 					points: 4
 				}}
 			/>
-		</Box>
+		</Flex>
 	);
 };
 

@@ -1,6 +1,0 @@
-.wave {
-	width: 100px;
-	@media only screen and (max-width: 900px) {
-		height: 200px;
-	}
-}

@@ -15,12 +15,26 @@ const Header = () => {
 			mt="20vh"
 		>
 			<Link href="/login" passHref>
-				<Button width="16rem" bgGradient="linear(to-tr, teal.300,yellow.400)">
+				<Button
+					color="gray.800"
+					width="16rem"
+					bgGradient="linear(to-tr, teal.300,yellow.400)"
+					_hover={{
+						boxShadow: "0 5px 15px rgba(92, 182, 119, .4)"
+					}}
+				>
 					Login
 				</Button>
 			</Link>
 			<Link href="/register" passHref>
-				<Button width="16rem" bgGradient="linear(to-tr, teal.300,yellow.400)">
+				<Button
+					color="gray.800"
+					width="16rem"
+					bgGradient="linear(to-tr, teal.300,yellow.400)"
+					_hover={{
+						boxShadow: "0 5px 15px rgba(92, 182, 119, .4)"
+					}}
+				>
 					Register
 				</Button>
 			</Link>

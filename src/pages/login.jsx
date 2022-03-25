@@ -1,4 +1,5 @@
 import Head from "next/head";
+import ScreenContainer from "../components/layouts/ScreenContainer";
 import LoginForm from "../components/pages/Login/LoginForm";
 
 const Login = () => {
@@ -7,7 +8,9 @@ const Login = () => {
 			<Head>
 				<title>CheetaPanel | Login</title>
 			</Head>
-			<LoginForm />
+			<ScreenContainer display="flex" justifyContent="center" alignItems="center">
+				<LoginForm />
+			</ScreenContainer>
 		</>
 	);
 };

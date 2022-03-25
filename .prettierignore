@@ -1,2 +1,6 @@
-node_modules
-.yarn
+.yarn/
+node_modules/
+.next/
+.idea/
+.vscode/
+package.json

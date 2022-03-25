@@ -1,17 +1,6 @@
 import { motion } from "framer-motion";
 
-const Hamburger = ({
-	isOpen,
-	setOpen,
-	openRef,
-	width = 24,
-	height = 24,
-	strokeWidth = 1,
-	color = "#fff",
-	transition = null,
-	lineProps = null,
-	...props
-}) => {
+const Hamburger = ({ isOpen, setOpen, width = 24, height = 24, strokeWidth = 1, color = "#fff", transition = null, lineProps = null, ...props }) => {
 	const variant = isOpen ? "opened" : "closed";
 
 	const top = {
@@ -59,10 +48,7 @@ const Hamburger = ({
 	return (
 		<motion.svg
 			z={50}
-			onClick={() => {
-				setOpen((o) => !o);
-				openRef();
-			}}
+			onClick={() => setOpen((o) => !o)}
 			style={{ cursor: "pointer" }}
 			viewBox={`0 0 ${unitWidth} ${unitHeight}`}
 			overflow="visible"

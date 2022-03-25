@@ -1,8 +1,8 @@
 import { chakra } from "@chakra-ui/react";
 
-const ScreenContainer = ({ children }) => {
+const ScreenContainer = ({ children, ...props }) => {
 	return (
-		<chakra.div w="100vw" h="100vh">
+		<chakra.div w="100vw" h="100vh" {...props}>
 			{children}
 		</chakra.div>
 	);
