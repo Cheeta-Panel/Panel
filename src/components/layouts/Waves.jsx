@@ -5,7 +5,6 @@ const Waves = () => {
 	return (
 		<Flex transform="scaleX(-1)" bottom="0" width="full" justifyContent="end" left="0" position="absolute">
 			<Wavify
-				className={styles.wave}
 				fill="#2b2b2b"
 				paused={false}
 				style={{ position: "relative" }}
