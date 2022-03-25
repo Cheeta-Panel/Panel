@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import Link from "next/link";
-import Button from "../../layouts/Button";
+import Button from "@layouts/Button";
 
 const Header = () => {
 	return (

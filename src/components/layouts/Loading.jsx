@@ -1,8 +1,8 @@
 import { Text } from "@chakra-ui/react";
 import { BarLoader } from "react-spinners";
 import ScreenContainer from "./ScreenContainer";
-import { loadingText } from "../../lib/constant";
-import { random } from "../../lib/functions";
+import { loadingText } from "@lib/constant";
+import { random } from "@lib/functions";
 import { useMemo, useState } from "react";
 
 const Loading = () => {
@@ -16,7 +16,7 @@ const Loading = () => {
 
 	return (
 		<ScreenContainer display="flex" justifyContent="center" alignItems="center" flexDir="column" gap="10">
-			<Text textAlign="center" fontWeight="bold" fontSize="xl">
+			<Text textAlign="center" fontWeight="bold" fontSize="xl" whiteSpace="pre-line">
 				{text}
 			</Text>
 			<BarLoader width="300px" color="#808bed" loading />

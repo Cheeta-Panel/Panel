@@ -1,6 +1,6 @@
 import Head from "next/head";
-import ScreenContainer from "../components/layouts/ScreenContainer";
-import RegisterForm from "../components/pages/Register/RegisterForm";
+import ScreenContainer from "@layouts/ScreenContainer";
+import RegisterForm from "@pages/Register/RegisterForm";
 
 const Register = () => {
 	return (

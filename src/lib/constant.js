@@ -5,5 +5,5 @@ export const loadingText = [
 	"Computing...",
 	"Thinking...",
 	"Give me a moment",
-	"Better then Pterodactyl - Cheetapanel\nCheetapanels quote by z_t0ht"
+	"Better then Pterodactyl - Cheetapanel\n\nCheetapanels quote by z_t0ht"
 ];

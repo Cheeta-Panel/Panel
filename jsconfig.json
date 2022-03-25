@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@layouts/*": ["src/components/layouts/*"],
+			"@pages/*": ["src/components/pages/*"],
+			"@svgs/*": ["src/components/svgs/*"],
+			"@components/*": ["src/components/*"],
+			"@lib/*": ["src/lib/*"]
+		}
+	}
+}

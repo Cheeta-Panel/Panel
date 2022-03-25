@@ -1,11 +1,14 @@
-import { Box, Flex, FormControl, FormErrorMessage, FormLabel, Input, chakra } from "@chakra-ui/react";
-import { Formik, Form, Field } from "formik";
-import Button from "../../layouts/Button";
+import { Box, Flex, chakra } from "@chakra-ui/react";
+import { Formik, Form } from "formik";
 import Link from "next/link";
+import Button from "@layouts/Button";
+import TextField from "@layouts/TextField";
+import PasswordField from "@layouts/PasswordField";
+import { loginSchema } from "@lib/schema";
 
 const LoginForm = () => {
 	const initialValues = {
-		email: "",
+		username_email: "",
 		password: ""
 	};
 
@@ -13,6 +16,7 @@ const LoginForm = () => {
 		<Box width={{ base: 80, sm: 80, md: "50%", lg: "40%" }} bgColor="#2b2b2b" p="10" borderRadius="lg" boxShadow="lg">
 			<Formik
 				initialValues={initialValues}
+				validationSchema={loginSchema}
 				onSubmit={(values, actions) => {
 					console.log(values);
 					setTimeout(() => {
@@ -22,29 +26,9 @@ const LoginForm = () => {
 			>
 				{({ isSubmitting }) => (
 					<Form>
-						<Field name="email">
-							{({ field, form }) => (
-								<FormControl isInvalid={form.errors.name && form.touched.name}>
-									<FormLabel htmlFor="email" fontSize=".875rem">
-										Username or email
-									</FormLabel>
-									<Input {...field} type="text" name="email" id="email" />
-									<FormErrorMessage>{form.errors.email}</FormErrorMessage>
-								</FormControl>
-							)}
-						</Field>
+						<TextField name="username_email" text="Username or email" />
 						<Box my="4" />
-						<Field name="password">
-							{({ field, form }) => (
-								<FormControl isInvalid={form.errors.password && form.touched.password}>
-									<FormLabel htmlFor="password" fontSize=".875rem">
-										Password
-									</FormLabel>
-									<Input {...field} type="password" name="password" id="password" />
-									<FormErrorMessage>{form.errors.email}</FormErrorMessage>
-								</FormControl>
-							)}
-						</Field>
+						<PasswordField name="password" text="Password" />
 						<Flex gap="5" mt="4" justifyContent="space-between" alignItems="center">
 							<Button _hover={{ boxShadow: "0 5px 15px rgba(92, 182, 119, .4)" }} bgColor="green.500" isLoading={isSubmitting} type="submit">
 								Login

@@ -11,7 +11,7 @@ const Button = ({ width = "6rem", height = "3rem", children, ...props }) => {
 			alignItems="center"
 			textTransform="uppercase"
 			fontSize=".875rem"
-			_active={{ transform: "scale(1.03)", transition: "all", transitionDuration: "50ms", transitionTimingFunction: "linear" }}
+			_active={{ transform: "scale(0.94)", transition: "all", transitionDuration: "50ms", transitionTimingFunction: "linear" }}
 			_focus={{ border: "none" }}
 			{...props}
 		>

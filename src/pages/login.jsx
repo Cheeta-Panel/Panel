@@ -1,6 +1,6 @@
 import Head from "next/head";
-import ScreenContainer from "../components/layouts/ScreenContainer";
-import LoginForm from "../components/pages/Login/LoginForm";
+import ScreenContainer from "@layouts/ScreenContainer";
+import LoginForm from "@pages/Login/LoginForm";
 
 const Login = () => {
 	return (

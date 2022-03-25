@@ -1,7 +1,10 @@
-import { Box, Flex, FormControl, FormErrorMessage, FormLabel, Input, chakra } from "@chakra-ui/react";
-import { Formik, Form, Field } from "formik";
-import Button from "../../layouts/Button";
+import { Box, Flex, chakra } from "@chakra-ui/react";
+import { Formik, Form } from "formik";
+import Button from "@layouts/Button";
 import Link from "next/link";
+import TextField from "@layouts/TextField";
+import PasswordField from "@layouts/PasswordField";
+import { registerSchema } from "@lib/schema";
 
 const RegisterForm = () => {
 	const initialValues = {
@@ -14,6 +17,7 @@ const RegisterForm = () => {
 		<Box width={{ base: 80, sm: 80, md: "50%", lg: "40%" }} bgColor="#2b2b2b" p="10" borderRadius="lg" boxShadow="lg">
 			<Formik
 				initialValues={initialValues}
+				validationSchema={registerSchema}
 				onSubmit={(values, actions) => {
 					console.log(values);
 					setTimeout(() => {
@@ -23,52 +27,13 @@ const RegisterForm = () => {
 			>
 				{({ isSubmitting }) => (
 					<Form>
-						<Field name="email">
-							{({ field, form }) => (
-								<FormControl isInvalid={form.errors.email && form.touched.email}>
-									<FormLabel htmlFor="email" fontSize=".875rem">
-										Email
-									</FormLabel>
-									<Input {...field} type="text" name="email" id="email" />
-									<FormErrorMessage>{form.errors.email}</FormErrorMessage>
-								</FormControl>
-							)}
-						</Field>
-						<Field name="username">
-							{({ field, form }) => (
-								<FormControl isInvalid={form.errors.username && form.touched.username}>
-									<FormLabel htmlFor="username" fontSize=".875rem">
-										Username
-									</FormLabel>
-									<Input {...field} type="text" name="username" id="username" />
-									<FormErrorMessage>{form.errors.username}</FormErrorMessage>
-								</FormControl>
-							)}
-						</Field>
+						<TextField name="email" text="Email" />
 						<Box my="4" />
-						<Field name="password">
-							{({ field, form }) => (
-								<FormControl isInvalid={form.errors.password && form.touched.password}>
-									<FormLabel htmlFor="password" fontSize=".875rem">
-										Password
-									</FormLabel>
-									<Input {...field} type="password" name="password" id="password" />
-									<FormErrorMessage>{form.errors.password}</FormErrorMessage>
-								</FormControl>
-							)}
-						</Field>
+						<TextField name="username" text="Username" />
 						<Box my="4" />
-						<Field name="confirm_password">
-							{({ field, form }) => (
-								<FormControl isInvalid={form.errors.confirm_password && form.touched.confirm_password}>
-									<FormLabel htmlFor="confirm_password" fontSize=".875rem">
-										Confirm Password
-									</FormLabel>
-									<Input {...field} type="confirm_password" name="confirm_password" id="confirm_password" />
-									<FormErrorMessage>{form.errors.confirm_password}</FormErrorMessage>
-								</FormControl>
-							)}
-						</Field>
+						<PasswordField name="password" text="Password" />
+						<Box my="4" />
+						<PasswordField name="password_confirmation" text="Confirm Password" />
 						<Flex gap="5" mt="4" justifyContent="space-between" alignItems="center">
 							<Button _hover={{ boxShadow: "0 5px 15px rgba(92, 182, 119, .4)" }} bgColor="green.500" isLoading={isSubmitting} type="submit">
 								Register
