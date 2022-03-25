@@ -45,13 +45,14 @@ const LoginForm = () => {
 								</FormControl>
 							)}
 						</Field>
-						<Flex mt="4" justifyContent="space-between" alignItems="center">
+						<Flex gap="5" mt="4" justifyContent="space-between" alignItems="center">
 							<Button _hover={{ boxShadow: "0 5px 15px rgba(92, 182, 119, .4)" }} bgColor="green.500" isLoading={isSubmitting} type="submit">
 								Login
 							</Button>
 							<Link href="/forgot-password" passHref>
 								<chakra.div
 									cursor="pointer"
+									fontSize={{ base: "sm", md: "md" }}
 									_after={{
 										background: "none repeat scroll 0 0 transparent",
 										content: '""',
